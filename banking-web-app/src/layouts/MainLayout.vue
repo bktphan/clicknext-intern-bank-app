@@ -1,6 +1,5 @@
-
 <script setup>
-import Sidebar from '../components/Slidebar.vue';
+import Sidebar from '../components/MenuSidebar.vue';
 import { useUserStore } from '../stores/user';
 import { useRouter } from 'vue-router';
 
