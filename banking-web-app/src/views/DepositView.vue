@@ -1,23 +1,22 @@
 <script setup>
-import { ref } from 'vue';
-import { useBankStore } from '../stores/bank';
-import MainLayout from '../layouts/MainLayout.vue';
+import { ref } from 'vue'
+import { useBankStore } from '../stores/bank'
+import MainLayout from '../layouts/MainLayout.vue'
 
-const amount = ref('');
-const bankStore = useBankStore();
+const amount = ref('')
+const bankStore = useBankStore()
 
 const handleTransaction = (type) => {
-    const value = Number(amount.value);
+    const value = Number(amount.value)
+    
     if (!amount.value || value <= 0) {
         alert('กรุณากรอกจำนวนเงินให้ถูกต้อง')
         return
     }
-
     if (value > 100000) {
         alert('ทำรายการได้สูงสุดครั้งละ 100,000 บาท')
         return
     }
-
     if (type === 'withdraw' && value > bankStore.balance) {
         alert('ยอดเงินในบัญชีไม่เพียงพอสำหรับการถอน')
         return

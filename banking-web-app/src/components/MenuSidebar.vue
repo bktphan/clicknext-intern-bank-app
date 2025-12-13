@@ -1,10 +1,10 @@
 <script setup>
-import { RouterLink, useRoute, useRouter } from 'vue-router';
-import { useUserStore } from '../stores/user';
+import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { useUserStore } from '../stores/user'
 
-const route = useRoute();
-const router = useRouter();
-const userStore = useUserStore();
+const route = useRoute()
+const router = useRouter()
+const userStore = useUserStore()
 
 const handleLogout = () => {
     userStore.logout()

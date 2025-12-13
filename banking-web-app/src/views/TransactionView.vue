@@ -1,9 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useBankStore } from '../stores/bank';
-import { useUserStore } from '../stores/user';
-import MainLayout from '../layouts/MainLayout.vue';
-import { Modal } from 'bootstrap';
+import { ref, onMounted } from 'vue'
+import { useBankStore } from '../stores/bank'
+import { useUserStore } from '../stores/user'
+import MainLayout from '../layouts/MainLayout.vue'
+import { Modal } from 'bootstrap'
 
 const bankStore = useBankStore()
 const userStore = useUserStore()

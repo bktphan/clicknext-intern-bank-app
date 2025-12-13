@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import { defineStore } from "pinia"
 
 export const useUserStore = defineStore("user", {
     state: () => ({
@@ -7,14 +7,14 @@ export const useUserStore = defineStore("user", {
     }),
     actions: {
         login(email) {
-            this.isLoggedIn = true;
-            this.email = email;
-            localStorage.setItem("isLoggedIn", "true");
-            localStorage.setItem("email", email);
+            this.isLoggedIn = true
+            this.email = email
+            localStorage.setItem("isLoggedIn", "true")
+            localStorage.setItem("email", email)
         },
         logout() {
-            this.isLoggedIn = false;
-            this.email = "";
+            this.isLoggedIn = false
+            this.email = ""
             localStorage.removeItem("isLoggedIn")
             localStorage.removeItem("email")
         }
